@@ -1,6 +1,6 @@
 export interface Message {
   id: string;
-  role: 'user' | 'assistant' | 'system';
+  role: "user" | "assistant" | "system";
   content: string;
   timestamp: number;
   isStreaming?: boolean;
@@ -17,10 +17,12 @@ export interface ProfileData {
   email: string;
   github: string;
   linkedin: string;
+
   skills: {
     category: string;
     items: string[];
   }[];
+
   projects: {
     id: string;
     title: string;
@@ -30,6 +32,7 @@ export interface ProfileData {
     github?: string;
     highlights: string[];
   }[];
+
   experience: {
     company: string;
     role: string;
@@ -42,6 +45,16 @@ export interface PrebuiltPrompt {
   id: string;
   title: string;
   prompt: string;
-  category: 'Overview' | 'Skills' | 'Projects' | 'Why Hire' | 'Interview';
+
+  category:
+    | "Overview"
+    | "Skills"
+    | "Projects"
+    | "Why Hire"
+    | "Interview"
+    | "AI"
+    | "Automation"
+    | "Contact";
+
   iconName: string;
 }

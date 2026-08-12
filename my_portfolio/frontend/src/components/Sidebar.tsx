@@ -60,31 +60,42 @@ export const Sidebar: React.FC<SidebarProps> = ({
             </div>
 
             {/* Profile Avatar & Info Header */}
-            <div className="mt-4 p-2">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 mb-4 shadow-[0_0_20px_rgba(59,130,246,0.3)] flex items-center justify-center text-white text-2xl font-bold">
-                AS
-              </div>
-              <h2 className="text-xl font-semibold tracking-tight text-white">{ABDULLAH_PROFILE.name}</h2>
-              <p className="text-slate-400 text-sm font-medium mt-0.5">{ABDULLAH_PROFILE.title}</p>
-
-              <div className="mt-4 flex flex-wrap gap-2">
-                <span className="px-2 py-1 rounded bg-slate-800 text-[10px] font-mono text-slate-400 uppercase tracking-widest">
-                  Active Now
-                </span>
-                <span className="px-2 py-1 rounded bg-blue-500/10 text-[10px] font-mono text-blue-400 uppercase tracking-widest border border-blue-500/20">
-                  AI Agent
-                </span>
-              </div>
-
-              <p className="mt-4 text-xs leading-relaxed text-slate-400">
-                {ABDULLAH_PROFILE.bio}
-              </p>
-
-              <div className="mt-3 flex items-center space-x-1.5 text-xs text-slate-500">
-                <MapPin className="h-3.5 w-3.5 text-blue-400 shrink-0" />
-                <span>{ABDULLAH_PROFILE.location}</span>
-              </div>
+           <div className="mt-4 p-2">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 mb-4 shadow-[0_0_20px_rgba(59,130,246,0.3)] flex items-center justify-center overflow-hidden">
+              <img
+                src="/black-cat.ico"
+                alt="Abdullah Sheikh"
+                className="w-12 h-12 object-contain"
+              />
             </div>
+
+            <h2 className="text-xl font-semibold tracking-tight text-white">
+              {ABDULLAH_PROFILE.name}
+            </h2>
+
+            <p className="text-slate-400 text-sm font-medium mt-0.5">
+              {ABDULLAH_PROFILE.title}
+            </p>
+
+            <div className="mt-4 flex flex-wrap gap-2">
+              <span className="px-2 py-1 rounded bg-slate-800 text-[10px] font-mono text-slate-400 uppercase tracking-widest">
+                Active Now
+              </span>
+
+              <span className="px-2 py-1 rounded bg-blue-500/10 text-[10px] font-mono text-blue-400 uppercase tracking-widest border border-blue-500/20">
+                AI Agent
+              </span>
+            </div>
+
+            <p className="mt-4 text-xs leading-relaxed text-slate-400">
+              {ABDULLAH_PROFILE.bio}
+            </p>
+
+            <div className="mt-3 flex items-center space-x-1.5 text-xs text-slate-500">
+              <MapPin className="h-3.5 w-3.5 text-blue-400 shrink-0" />
+              <span>{ABDULLAH_PROFILE.location}</span>
+            </div>
+          </div>
 
             {/* Quick Actions */}
             <div className="mt-4 space-y-2">

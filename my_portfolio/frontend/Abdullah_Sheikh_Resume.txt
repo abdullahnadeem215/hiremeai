@@ -1,0 +1,76 @@
+====================================================
+ABDULLAH SHEIKH - FULL-STACK AI & SOFTWARE ENGINEER
+====================================================
+Email: abdullahsheikh6883@gmail.com
+GitHub: https://github.com/abdullahnadeem215
+Repository: https://github.com/abdullahnadeem215/hiremeai
+Location: Remote / Open to Relocation
+Status: Available for Full-time & High-Impact Roles
+
+SUMMARY
+----------------------------------------------------
+Passionate engineer crafting intelligent agentic AI systems, streaming web applications, and high-performance full-stack web solutions. Specialized in React, TypeScript, Node.js, Python, and GenAI integrations.
+
+SKILLS & EXPERTISE
+----------------------------------------------------
+AI & LLM Architecture:
+  Gemini API, OpenAI API, RAG Pipelines, Agentic Workflows, LangChain / LlamaIndex, Vector DBs (Pinecone, Chroma), Prompt Engineering
+
+Frontend Development:
+  React 19, TypeScript, Next.js, Tailwind CSS, Framer Motion, React Query / TanStack, Redux Toolkit, WebSockets / SSE
+
+Backend & Systems:
+  Node.js, Express.js, Python, FastAPI, RESTful APIs, GraphQL, PostgreSQL, MongoDB, Redis
+
+Cloud & DevOps:
+  Docker, Google Cloud Run / GCP, AWS (S3, Lambda, EC2), CI/CD Pipelines, Vite, Git / GitHub Actions
+
+FEATURED PROJECTS
+----------------------------------------------------
+• HireMe AI - AI Portfolio Assistant
+  Description: Interactive conversational portfolio with real-time streaming AI answers, recruiter prompt presets, and keyboard-accessible UI.
+  Repository: https://github.com/abdullahnadeem215/hiremeai
+  Tech: React 19, TypeScript, Gemini 3.6 Flash, Express, Tailwind CSS, Framer Motion, React Query
+  Highlights:
+    - Streams responses in real-time with zero UI flickering.
+    - Built custom system prompt knowledge base to answer technical & behavioral recruiter questions.
+    - 100% accessible with ARIA live regions and full keyboard navigation.
+
+• Agentic AI Workflow Builder
+  Description: Visual node-based canvas for orchestrating autonomous AI agent graphs with tool execution and multi-model streaming.
+  Repository: https://github.com/abdullahnadeem215
+  Tech: Next.js, TypeScript, Python FastAPI, LangChain, Tailwind CSS, React Flow
+  Highlights:
+    - Enabled multi-agent collaboration loops for complex reasoning tasks.
+    - Integrated streaming SSE channels for live node execution status.
+    - Reduced workflow execution latency by 35% using asynchronous task queues.
+
+• Enterprise RAG Document Intelligence
+  Description: High-throughput document search and questioning platform utilizing hybrid dense-sparse vector search and chunk re-ranking.
+  Repository: https://github.com/abdullahnadeem215
+  Tech: Python, FastAPI, Pinecone, Gemini 3.6 Flash, React, Docker
+  Highlights:
+    - Processes PDF/Word documents into contextual vector embeddings in seconds.
+    - Implemented citation grounding so every AI response links directly to source document pages.
+    - Architected scalable backend deployed on Cloud Run.
+
+• Pulse Real-time Analytics Dashboard
+  Description: High-density data visualization suite monitoring microservice health, user telemetry, and live streaming metrics.
+  Repository: https://github.com/abdullahnadeem215
+  Tech: React, TypeScript, Recharts, Node.js, WebSockets, Redis, Tailwind CSS
+  Highlights:
+    - Sub-100ms real-time metric updates using WebSockets and Redis pub-sub.
+    - Custom responsive dashboard cards with fluid chart resizing.
+    - Built dark mode theme with high contrast visual accessibility.
+
+WORK EXPERIENCE
+----------------------------------------------------
+• Senior Full-Stack AI Engineer @ AI & Full-Stack Solutions (2023 - Present)
+    - Architected production GenAI features and agentic interfaces used by thousands of users.
+    - Engineered server-side streaming API endpoints reducing perceived response time by 60%.
+    - Mentored junior developers and instituted strict TypeScript & component architecture standards.
+
+• Software Developer @ DevSolutions Studio (2021 - 2023)
+    - Developed scalable web portals with React, Node.js, and PostgreSQL.
+    - Implemented OAuth authorization and JWT security middleware.
+    - Optimized frontend bundle size by 40% using code splitting and lazy component loading.

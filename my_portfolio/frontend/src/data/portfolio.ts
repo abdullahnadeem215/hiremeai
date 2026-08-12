@@ -1,101 +1,398 @@
-import { ProfileData, PrebuiltPrompt } from '../types';
+import { ProfileData, PrebuiltPrompt } from "../types";
 
 export const ABDULLAH_PROFILE: ProfileData = {
   name: "Abdullah Sheikh",
-  title: "Full-Stack AI & Software Engineer",
-  bio: "Passionate engineer crafting intelligent agentic AI systems, streaming web applications, and high-performance full-stack web solutions. Specialized in React, TypeScript, Node.js, Python, and GenAI integrations.",
-  availability: "Available for Full-time & High-Impact Roles",
-  location: "Remote / Open to Relocation",
+
+  title: "AI Engineer & Full-Stack Software Engineer",
+
+  bio:
+    "Software Engineering student focused on AI engineering, LLM applications, AI agents, workflow automation, and full-stack application development. Builds practical AI-powered systems using Python, FastAPI, React, n8n, LLM APIs, RAG, and agentic workflows.",
+
+  availability: "Available for internships, junior AI/software engineering roles, and freelance opportunities",
+
+  location: "Faisalabad, Pakistan",
+
   email: "abdullahsheikh6883@gmail.com",
+
   github: "https://github.com/abdullahnadeem215",
-  linkedin: "https://github.com/abdullahnadeem215",
+
+  linkedin: "https://www.linkedin.com/in/abdullah-sheikh-2882a1317/",
+
   skills: [
     {
-      category: "AI & LLM Architecture",
-      items: ["Gemini API", "OpenAI API", "RAG Pipelines", "Agentic Workflows", "LangChain / LlamaIndex", "Vector DBs (Pinecone, Chroma)", "Prompt Engineering"]
+      category: "AI & LLM Engineering",
+      items: [
+        "LLM Applications",
+        "Prompt Engineering",
+        "Context Engineering",
+        "RAG",
+        "AI Agents",
+        "Agentic AI",
+        "Multi-Agent Systems",
+        "LLM API Integration",
+        "Google Gemini",
+        "Groq",
+        "Hugging Face"
+      ]
     },
+
+    {
+      category: "Backend Development",
+      items: [
+        "Python",
+        "FastAPI",
+        "Pydantic",
+        "REST APIs",
+        "Webhooks",
+        "API Integration"
+      ]
+    },
+
     {
       category: "Frontend Development",
-      items: ["React 19", "TypeScript", "Next.js", "Tailwind CSS", "Framer Motion", "React Query / TanStack", "Redux Toolkit", "WebSockets / SSE"]
+      items: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Tailwind CSS"
+      ]
     },
+
     {
-      category: "Backend & Systems",
-      items: ["Node.js", "Express.js", "Python", "FastAPI", "RESTful APIs", "GraphQL", "PostgreSQL", "MongoDB", "Redis"]
+      category: "Automation & AI Workflows",
+      items: [
+        "n8n",
+        "Workflow Automation",
+        "Business Process Automation",
+        "LLM Workflow Orchestration",
+        "Email Automation",
+        "OCR Automation"
+      ]
     },
+
     {
-      category: "Cloud & DevOps",
-      items: ["Docker", "Google Cloud Run / GCP", "AWS (S3, Lambda, EC2)", "CI/CD Pipelines", "Vite", "Git / GitHub Actions"]
+      category: "Data & Machine Learning",
+      items: [
+        "Python",
+        "NumPy",
+        "Pandas",
+        "Matplotlib",
+        "Scikit-learn",
+        "Data Preprocessing",
+        "Regression"
+      ]
+    },
+
+    {
+      category: "Databases & Tools",
+      items: [
+        "MySQL",
+        "PostgreSQL",
+        "SQLite",
+        "Git",
+        "GitHub",
+        "Postman",
+        "VS Code"
+      ]
+    },
+
+    {
+      category: "Programming & Software Engineering",
+      items: [
+        "C++",
+        "Python",
+        "JavaScript",
+        "Object-Oriented Programming",
+        "Data Structures & Algorithms",
+        "Database Management Systems",
+        "Software Engineering"
+      ]
     }
   ],
+
   projects: [
     {
       id: "hireme-ai",
-      title: "HireMe AI - AI Portfolio Assistant",
-      description: "Interactive conversational portfolio with real-time streaming AI answers, recruiter prompt presets, and keyboard-accessible UI.",
-      tech: ["React 19", "TypeScript", "Gemini 3.6 Flash", "Express", "Tailwind CSS", "Framer Motion", "React Query"],
+
+      title: "HireMe AI – AI Portfolio Assistant",
+
+      description:
+        "An AI-powered conversational portfolio assistant that allows recruiters to ask questions about Abdullah's technical background, projects, skills, education, and capabilities.",
+
+      tech: [
+        "React",
+        "JavaScript",
+        "Tailwind CSS",
+        "FastAPI",
+        "Python",
+        "Groq",
+        "LLM",
+        "Server-Sent Events",
+        "Pydantic"
+      ],
+
       github: "https://github.com/abdullahnadeem215/hiremeai",
+
       highlights: [
-        "Streams responses in real-time with zero UI flickering.",
-        "Built custom system prompt knowledge base to answer technical & behavioral recruiter questions.",
-        "100% accessible with ARIA live regions and full keyboard navigation."
+        "Provides recruiter-focused conversational responses about Abdullah's portfolio.",
+        "Uses a resume analyzer to convert resume information into structured knowledge.",
+        "Streams LLM responses to the frontend using Server-Sent Events.",
+        "Deployed frontend and backend separately for a production-style architecture."
       ]
     },
+
     {
-      id: "agentic-flow",
-      title: "Agentic AI Workflow Builder",
-      description: "Visual node-based canvas for orchestrating autonomous AI agent graphs with tool execution and multi-model streaming.",
-      tech: ["Next.js", "TypeScript", "Python FastAPI", "LangChain", "Tailwind CSS", "React Flow"],
+      id: "ai-recruitment-agent",
+
+      title: "AI Recruitment Application Agent",
+
+      description:
+        "An AI-powered recruitment automation system that processes candidate applications, evaluates candidates, assigns priority, and automates recruitment-related communication.",
+
+      tech: [
+        "n8n",
+        "LLMs",
+        "AI Automation",
+        "Email Automation",
+        "Data Processing"
+      ],
+
       github: "https://github.com/abdullahnadeem215",
+
       highlights: [
-        "Enabled multi-agent collaboration loops for complex reasoning tasks.",
-        "Integrated streaming SSE channels for live node execution status.",
-        "Reduced workflow execution latency by 35% using asynchronous task queues."
+        "Automates candidate application processing.",
+        "Uses AI to assist with candidate evaluation.",
+        "Assigns application priority based on defined criteria.",
+        "Automates communication and data handling through workflow automation."
       ]
     },
+
     {
-      id: "rag-doc-engine",
-      title: "Enterprise RAG Document Intelligence",
-      description: "High-throughput document search and questioning platform utilizing hybrid dense-sparse vector search and chunk re-ranking.",
-      tech: ["Python", "FastAPI", "Pinecone", "Gemini 3.6 Flash", "React", "Docker"],
+      id: "docuvision",
+
+      title: "DocuVision – Intelligent Document Processing System",
+
+      description:
+        "An intelligent document-processing workflow that extracts useful information from unstructured documents and transforms it into structured data.",
+
+      tech: [
+        "n8n",
+        "OCR",
+        "LLMs",
+        "Document Processing",
+        "AI Automation"
+      ],
+
       github: "https://github.com/abdullahnadeem215",
+
       highlights: [
-        "Processes PDF/Word documents into contextual vector embeddings in seconds.",
-        "Implemented citation grounding so every AI response links directly to source document pages.",
-        "Architected scalable backend deployed on Cloud Run."
+        "Processes unstructured documents.",
+        "Uses OCR to extract information from documents.",
+        "Uses LLMs to transform extracted information into structured outputs.",
+        "Automates the document-processing pipeline using n8n."
       ]
     },
+
     {
-      id: "pulse-analytics",
-      title: "Pulse Real-time Analytics Dashboard",
-      description: "High-density data visualization suite monitoring microservice health, user telemetry, and live streaming metrics.",
-      tech: ["React", "TypeScript", "Recharts", "Node.js", "WebSockets", "Redis", "Tailwind CSS"],
+      id: "kohinoor-agent",
+
+      title: "KohinoorAgent – AI Lead Qualification Agent",
+
+      description:
+        "An AI-powered lead qualification workflow designed for a label-manufacturing business to analyze and qualify incoming leads automatically.",
+
+      tech: [
+        "n8n",
+        "LLMs",
+        "AI Agents",
+        "Lead Qualification",
+        "Workflow Automation"
+      ],
+
       github: "https://github.com/abdullahnadeem215",
+
       highlights: [
-        "Sub-100ms real-time metric updates using WebSockets and Redis pub-sub.",
-        "Custom responsive dashboard cards with fluid chart resizing.",
-        "Built dark mode theme with high contrast visual accessibility."
+        "Analyzes incoming business leads.",
+        "Uses AI to evaluate lead information.",
+        "Automates lead qualification.",
+        "Connects business data with AI-driven workflow automation."
+      ]
+    },
+
+    {
+      id: "linkedin-automation",
+
+      title: "AI-Powered LinkedIn Content Automation",
+
+      description:
+        "An automated content-generation pipeline that plans, generates, and prepares LinkedIn content using LLMs, image generation, and scheduled workflows.",
+
+      tech: [
+        "n8n",
+        "LLMs",
+        "Image Generation",
+        "API Integration",
+        "Workflow Automation"
+      ],
+
+      github: "https://github.com/abdullahnadeem215",
+
+      highlights: [
+        "Uses a predefined content plan to generate LinkedIn posts.",
+        "Generates post content and hashtags using an LLM.",
+        "Generates image prompts and integrates image-generation models.",
+        "Automates the content workflow through scheduled n8n processes."
+      ]
+    },
+
+    {
+      id: "prof-mentor",
+
+      title: "Prof Mentor – AI Roadmap & Mentoring Application",
+
+      description:
+        "An AI-powered application designed to provide personalized technical learning roadmaps and mentorship guidance.",
+
+      tech: [
+        "AI",
+        "LLMs",
+        "React",
+        "Web Application"
+      ],
+
+      github: "https://prof-mentor.vercel.app/",
+
+      highlights: [
+        "Generates personalized technical learning guidance.",
+        "Uses AI to help users plan their learning journey.",
+        "Designed as an interactive AI mentoring application."
+      ]
+    },
+
+    {
+      id: "cost-estimation-agent",
+
+      title: "AI Cost Estimation Multi-Agent System",
+
+      description:
+        "A multi-agent AI system that breaks down software projects into components and estimates project costs using specialized AI agents.",
+
+      tech: [
+        "AI Agents",
+        "LLMs",
+        "Multi-Agent Architecture",
+        "Workflow Automation"
+      ],
+
+      github: "https://github.com/abdullahnadeem215",
+
+      highlights: [
+        "Uses multiple specialized AI agents.",
+        "Breaks software projects into smaller components.",
+        "Uses agent collaboration to analyze project requirements.",
+        "Produces project cost estimation based on the generated analysis."
+      ]
+    },
+
+    {
+      id: "ims",
+
+      title: "Interview Management System",
+
+      description:
+        "A software engineering project for managing interviews using priority-based scheduling and data structures.",
+
+      tech: [
+        "C++",
+        "Data Structures",
+        "Algorithms",
+        "Priority Scheduling"
+      ],
+
+      github: "https://github.com/abdullahnadeem215",
+
+      highlights: [
+        "Uses priority-based scheduling for interview management.",
+        "Demonstrates practical application of data structures and algorithms.",
+        "Built as part of software engineering studies."
+      ]
+    },
+
+    {
+      id: "rdms",
+
+      title: "Rural Development Management System",
+
+      description:
+        "A database-driven application for organizing and managing rural development activities.",
+
+      tech: [
+        "PHP",
+        "MySQL",
+        "DBMS"
+      ],
+
+      github: "https://github.com/abdullahnadeem215/RDMS",
+
+      highlights: [
+        "Uses a relational database for application data.",
+        "Demonstrates database management and CRUD operations.",
+        "Built as a DBMS-focused software project."
+      ]
+    },
+
+    {
+      id: "kisan-ai",
+
+      title: "Kisan AI",
+
+      description:
+        "An academic software engineering project focused on requirements and system specifications for an AI-driven agricultural solution.",
+
+      tech: [
+        "Software Requirements Engineering",
+        "AI",
+        "System Analysis"
+      ],
+
+      github: "https://github.com/abdullahnadeem215",
+
+      highlights: [
+        "Focused on software requirements and system specifications.",
+        "Explored the application of AI to agricultural problems.",
+        "Demonstrates software analysis and requirements engineering."
       ]
     }
   ],
+
   experience: [
     {
-      company: "AI & Full-Stack Solutions",
-      role: "Senior Full-Stack AI Engineer",
-      period: "2023 - Present",
+      company: "The University of Faisalabad",
+
+      role: "BS Software Engineering Student",
+
+      period: "Current",
+
       highlights: [
-        "Architected production GenAI features and agentic interfaces used by thousands of users.",
-        "Engineered server-side streaming API endpoints reducing perceived response time by 60%.",
-        "Mentored junior developers and instituted strict TypeScript & component architecture standards."
+        "Pursuing a BS in Software Engineering.",
+        "Developing foundations in software engineering, programming, databases, data structures, and algorithms.",
+        "Building practical AI and software projects alongside academic studies."
       ]
     },
+
     {
-      company: "DevSolutions Studio",
-      role: "Software Developer",
-      period: "2021 - 2023",
+      company: "Saylani Mass IT Training Program",
+
+      role: "Agentic AI Training",
+
+      period: "Current Training",
+
       highlights: [
-        "Developed scalable web portals with React, Node.js, and PostgreSQL.",
-        "Implemented OAuth authorization and JWT security middleware.",
-        "Optimized frontend bundle size by 40% using code splitting and lazy component loading."
+        "Training in AI engineering and agentic AI development.",
+        "Studying LLM application development, prompt and context engineering, AI agents, multi-agent systems, AI system design, and AI infrastructure.",
+        "Applying the concepts through practical AI projects."
       ]
     }
   ]
@@ -105,43 +402,72 @@ export const PREBUILT_PROMPTS: PrebuiltPrompt[] = [
   {
     id: "overview",
     title: "Quick Background",
-    prompt: "Give me a 30-second executive summary of Abdullah's experience and what makes him stand out as an engineer.",
+    prompt:
+      "Give me a concise professional overview of Abdullah Sheikh, including his education, current focus, strongest technical areas, and the type of roles he is targeting.",
     category: "Overview",
     iconName: "UserCheck"
   },
+
   {
     id: "top-skills",
     title: "Core Tech Stack",
-    prompt: "What are Abdullah's primary technical skills in AI development, frontend React/TypeScript, and backend systems?",
+    prompt:
+      "What are Abdullah Sheikh's strongest technical skills? Group them into AI/LLM engineering, backend, frontend, automation, databases, and software engineering.",
     category: "Skills",
     iconName: "Code2"
   },
+
   {
     id: "best-projects",
-    title: "Key Projects & AI Work",
-    prompt: "Tell me about Abdullah's most impressive projects, especially in AI agents, streaming APIs, and full-stack web applications.",
+    title: "Key AI Projects",
+    prompt:
+      "What are Abdullah Sheikh's most relevant AI and software projects? Briefly explain the problem each project solves and the technologies used.",
     category: "Projects",
     iconName: "Sparkles"
   },
+
   {
     id: "why-hire",
     title: "Why Hire Abdullah?",
-    prompt: "Why should a hiring manager or recruiter hire Abdullah Sheikh for a Full-Stack AI Engineer role?",
+    prompt:
+      "Why could Abdullah Sheikh be a good candidate for a junior AI Engineer, AI Automation Engineer, or Full-Stack AI Engineer role? Base the answer only on his actual portfolio, education, skills, and projects.",
     category: "Why Hire",
     iconName: "Award"
   },
+
   {
-    id: "system-design",
-    title: "System Design Knowledge",
-    prompt: "How does Abdullah approach system design, state management, and real-time streaming interfaces in React & Express?",
-    category: "Interview",
+    id: "ai-experience",
+    title: "AI Engineering",
+    prompt:
+      "What practical experience does Abdullah Sheikh have with LLMs, RAG, AI agents, multi-agent systems, and AI automation?",
+    category: "AI",
     iconName: "Cpu"
   },
+
+  {
+    id: "automation",
+    title: "Automation Experience",
+    prompt:
+      "How has Abdullah Sheikh used n8n and AI automation in his projects? Give concrete examples from his portfolio.",
+    category: "Automation",
+    iconName: "Workflow"
+  },
+
+  {
+    id: "projects",
+    title: "Project Experience",
+    prompt:
+      "List Abdullah Sheikh's most important projects and briefly explain what each one does.",
+    category: "Projects",
+    iconName: "FolderKanban"
+  },
+
   {
     id: "contact-info",
-    title: "Contact & Resume",
-    prompt: "How can I contact Abdullah Sheikh directly or get a copy of his resume?",
-    category: "Overview",
+    title: "Contact & Profiles",
+    prompt:
+      "How can I contact Abdullah Sheikh or view his GitHub, LinkedIn, and portfolio projects?",
+    category: "Contact",
     iconName: "FileText"
   }
 ];
