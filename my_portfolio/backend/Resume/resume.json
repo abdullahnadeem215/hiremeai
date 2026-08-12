@@ -1,0 +1,417 @@
+{
+  "name": "Abdullah Sheikh",
+  "projects": [
+    {
+      "Title": "AI Recruitment Application Agent",
+      "Problem": "Automated recruitment workflow",
+      "tools": [
+        {
+          "n8n": true
+        },
+        {
+          "LLM": true
+        },
+        {
+          "Automation": true
+        },
+        {
+          "Email": true
+        },
+        {
+          "Data Processing": true
+        }
+      ],
+      "liveURL": null,
+      "github_link": "github.com/abdullahnadeem215"
+    },
+    {
+      "Title": "DocuVision — Intelligent Document Processing System",
+      "Problem": "Automated document-processing workflow",
+      "tools": [
+        {
+          "n8n": true
+        },
+        {
+          "OCR": true
+        },
+        {
+          "LLM": true
+        },
+        {
+          "Document Automation": true
+        }
+      ],
+      "liveURL": null,
+      "github_link": "github.com/abdullahnadeem215"
+    },
+    {
+      "Title": "AI Lead Qualification Agent — KohinoorAgent",
+      "Problem": "AI-powered lead qualification workflow",
+      "tools": [
+        {
+          "n8n": true
+        },
+        {
+          "LLM": true
+        },
+        {
+          "Lead Qualification": true
+        },
+        {
+          "Automation": true
+        }
+      ],
+      "liveURL": null,
+      "github_link": "github.com/abdullahnadeem215"
+    },
+    {
+      "Title": "AI-Powered LinkedIn Content Automation",
+      "Problem": "End-to-end content automation system",
+      "tools": [
+        {
+          "n8n": true
+        },
+        {
+          "LLM": true
+        },
+        {
+          "Image Generation": true
+        },
+        {
+          "Automation": true
+        }
+      ],
+      "liveURL": null,
+      "github_link": "github.com/abdullahnadeem215"
+    },
+    {
+      "Title": "Prof Mentor — AI Roadmap & Mentoring Application",
+      "Problem": "AI-powered application for learning guidance",
+      "tools": [
+        {
+          "AI": true
+        },
+        {
+          "LLM": true
+        },
+        {
+          "Web Application": true
+        }
+      ],
+      "liveURL": null,
+      "github_link": "github.com/abdullahnadeem215"
+    },
+    {
+      "Title": "AI Cost Estimation Multi-Agent System",
+      "Problem": "Agentic AI workflow for estimating project costs",
+      "tools": [
+        {
+          "AI Agents": true
+        },
+        {
+          "LLM": true
+        },
+        {
+          "Multi-Agent Architecture": true
+        }
+      ],
+      "liveURL": null,
+      "github_link": "github.com/abdullahnadeem215"
+    },
+    {
+      "Title": "Interview Management System",
+      "Problem": "Interview management system using priority-based scheduling",
+      "tools": [
+        {
+          "C++": true
+        },
+        {
+          "Data Structures & Algorithms": true
+        }
+      ],
+      "liveURL": null,
+      "github_link": "github.com/abdullahnadeem215"
+    },
+    {
+      "Title": "Rural Development Management System",
+      "Problem": "Database-driven management system for rural development activities",
+      "tools": [
+        {
+          "PHP": true
+        },
+        {
+          "MySQL": true
+        },
+        {
+          "DBMS": true
+        }
+      ],
+      "liveURL": null,
+      "github_link": "github.com/abdullahnadeem215"
+    },
+    {
+      "Title": "Kisan AI",
+      "Problem": "AI-oriented agricultural solution",
+      "tools": [
+        {
+          "Software Requirements Engineering": true
+        },
+        {
+          "AI Concept": true
+        }
+      ],
+      "liveURL": null,
+      "github_link": "github.com/abdullahnadeem215"
+    }
+  ],
+  "skills": [
+    {
+      "Programming": [
+        {
+          "Python": true
+        },
+        {
+          "C++": true
+        },
+        {
+          "JavaScript": true
+        }
+      ]
+    },
+    {
+      "AI & LLM": [
+        {
+          "LLM Applications": true
+        },
+        {
+          "Prompt Engineering": true
+        },
+        {
+          "RAG": true
+        },
+        {
+          "AI Agents": true
+        },
+        {
+          "Agentic AI": true
+        },
+        {
+          "Context Engineering": true
+        }
+      ]
+    },
+    {
+      "AI Frameworks": [
+        {
+          "LangChain": true
+        },
+        {
+          "LangGraph": true
+        },
+        {
+          "FastAPI": true
+        },
+        {
+          "Pydantic": true
+        }
+      ]
+    },
+    {
+      "Automation": [
+        {
+          "n8n": true
+        },
+        {
+          "Workflow Automation": true
+        },
+        {
+          "API Integrations": true
+        },
+        {
+          "Webhooks": true
+        }
+      ]
+    },
+    {
+      "Machine Learning": [
+        {
+          "Scikit-learn": true
+        },
+        {
+          "Pandas": true
+        },
+        {
+          "NumPy": true
+        },
+        {
+          "Matplotlib": true
+        },
+        {
+          "Data Preprocessing": true
+        },
+        {
+          "Regression": true
+        }
+      ]
+    },
+    {
+      "Backend": [
+        {
+          "Python": true
+        },
+        {
+          "FastAPI": true
+        },
+        {
+          "REST APIs": true
+        }
+      ]
+    },
+    {
+      "Frontend": [
+        {
+          "HTML": true
+        },
+        {
+          "CSS": true
+        },
+        {
+          "JavaScript": true
+        },
+        {
+          "React": true
+        },
+        {
+          "Vite": true
+        },
+        {
+          "Tailwind CSS": true
+        }
+      ]
+    },
+    {
+      "Databases": [
+        {
+          "MySQL": true
+        },
+        {
+          "PostgreSQL": true
+        },
+        {
+          "SQLite": true
+        }
+      ]
+    },
+    {
+      "Tools": [
+        {
+          "Git": true
+        },
+        {
+          "GitHub": true
+        },
+        {
+          "Postman": true
+        },
+        {
+          "VS Code": true
+        }
+      ]
+    },
+    {
+      "Other": [
+        {
+          "OCR": true
+        },
+        {
+          "PDF/DOCX Processing": true
+        },
+        {
+          "Google Gemini": true
+        },
+        {
+          "Groq": true
+        },
+        {
+          "Hugging Face": true
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "University": "The University of Faisalabad (TUF)",
+      "Degree": "Bachelor of Science in Software Engineering",
+      "CGP": "3.39",
+      "Relevant Coursework": [
+        {
+          "Data Structures & Algorithms": true
+        },
+        {
+          "Object-Oriented Programming": true
+        },
+        {
+          "Database Management Systems": true
+        },
+        {
+          "Software Requirements Engineering": true
+        },
+        {
+          "Operating Systems": true
+        },
+        {
+          "Software Engineering": true
+        }
+      ],
+      "Duration": "2024 – Present"
+    },
+    {
+      "Program": "Saylani Mass IT Training Program (SMIT)",
+      "Duration": "2024 – Present",
+      "Training areas": [
+        {
+          "Programming Foundations for AI": true
+        },
+        {
+          "AI Foundations": true
+        },
+        {
+          "Prompt & Context Engineering": true
+        },
+        {
+          "LLM Application Development": true
+        },
+        {
+          "AI Agent Development": true
+        },
+        {
+          "Multi-Agent Systems": true
+        },
+        {
+          "AI-Native Development": true
+        },
+        {
+          "AI System Design": true
+        },
+        {
+          "AI Infrastructure & DevOps": true
+        },
+        {
+          "Capstone AI Engineering": true
+        }
+      ]
+    }
+  ],
+  "certifications": [],
+  "socialmedia": [
+    {
+      "Platform": "LinkedIn",
+      "Link": "linkedin.com/in/abdullah-sheikh-2882a1317"
+    },
+    {
+      "Platform": "GitHub",
+      "Link": "github.com/abdullahnadeem215"
+    }
+  ],
+  "experience": []
+}
