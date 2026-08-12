@@ -95,14 +95,14 @@ export function useChatStream() {
 
 
         const response = await fetch(
-          `${backendUrl}/chat/stream?message=${encodeURIComponent(userPrompt)}`,
-          {
-            method: "GET",
-            headers: {
-              Accept: "text/event-stream",
-            },
-            signal: abortControllerRef.current.signal,
-          }
+            `${backendUrl}/chat/stream?message=${encodeURIComponent(userPrompt)}`,
+            {
+              method: "GET",
+              headers: {
+                Accept: "text/event-stream",
+              },
+              signal: abortControllerRef.current.signal,
+            }
         );
 
 
