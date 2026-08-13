@@ -2,11 +2,13 @@ from pydantic import BaseModel, Field
 
 
 class Projects(BaseModel):
-    Title:str | None = None
-    Problem : str | None = None
-    github_link:str |None = None
-    tools : list[dict] = Field(default_factory=list)
-    liveURL : str |None = None
+    id: str | None = None
+    title: str | None = None
+    description: str| None = None
+    tech: str | None = None
+    link: str | None = None
+    github: str | None = None
+    highlights: str | None = None
     
 class Resume(BaseModel):
     name: str | None = None

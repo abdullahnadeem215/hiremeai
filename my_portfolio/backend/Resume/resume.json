@@ -2,415 +2,141 @@
   "name": "Abdullah Sheikh",
   "projects": [
     {
-      "Title": "AI Recruitment Application Agent",
-      "Problem": "Automated recruitment workflow",
-      "tools": [
-        {
-          "n8n": true
-        },
-        {
-          "LLM": true
-        },
-        {
-          "Automation": true
-        },
-        {
-          "Email": true
-        },
-        {
-          "Data Processing": true
-        }
-      ],
-      "liveURL": null,
-      "github_link": "github.com/abdullahnadeem215"
+      "id": null,
+      "title": "AI Recruitment Application Agent",
+      "description": "Built an automated recruitment workflow that processes candidate applications and evaluates candidates using AI.",
+      "tech": "n8n, LLM, Automation, Email, Data Processing",
+      "link": null,
+      "github": null,
+      "highlights": "Reduced repetitive manual screening and demonstrated how LLMs can be integrated into real business workflows."
     },
     {
-      "Title": "DocuVision — Intelligent Document Processing System",
-      "Problem": "Automated document-processing workflow",
-      "tools": [
-        {
-          "n8n": true
-        },
-        {
-          "OCR": true
-        },
-        {
-          "LLM": true
-        },
-        {
-          "Document Automation": true
-        }
-      ],
-      "liveURL": null,
-      "github_link": "github.com/abdullahnadeem215"
+      "id": null,
+      "title": "DocuVision — Intelligent Document Processing System",
+      "description": "Built an automated document-processing workflow using n8n.",
+      "tech": "n8n, OCR, LLM, Document Automation",
+      "link": null,
+      "github": null,
+      "highlights": "Focused on turning unstructured documents into usable business information with minimal manual intervention."
     },
     {
-      "Title": "AI Lead Qualification Agent — KohinoorAgent",
-      "Problem": "AI-powered lead qualification workflow",
-      "tools": [
-        {
-          "n8n": true
-        },
-        {
-          "LLM": true
-        },
-        {
-          "Lead Qualification": true
-        },
-        {
-          "Automation": true
-        }
-      ],
-      "liveURL": null,
-      "github_link": "github.com/abdullahnadeem215"
+      "id": null,
+      "title": "AI Lead Qualification Agent — KohinoorAgent",
+      "description": "Developed an AI-powered lead qualification workflow for a label manufacturing business.",
+      "tech": "n8n, LLM, Lead Qualification, Automation",
+      "link": null,
+      "github": null,
+      "highlights": "Designed the workflow to reduce manual lead screening and improve sales-team efficiency."
     },
     {
-      "Title": "AI-Powered LinkedIn Content Automation",
-      "Problem": "End-to-end content automation system",
-      "tools": [
-        {
-          "n8n": true
-        },
-        {
-          "LLM": true
-        },
-        {
-          "Image Generation": true
-        },
-        {
-          "Automation": true
-        }
-      ],
-      "liveURL": null,
-      "github_link": "github.com/abdullahnadeem215"
+      "id": null,
+      "title": "AI-Powered LinkedIn Content Automation",
+      "description": "Built an end-to-end content automation system for generating and managing LinkedIn content.",
+      "tech": "n8n, LLM, Image Generation, Automation",
+      "link": null,
+      "github": null,
+      "highlights": "Implemented a content-management workflow capable of maintaining a multi-day publishing plan."
     },
     {
-      "Title": "Prof Mentor — AI Roadmap & Mentoring Application",
-      "Problem": "AI-powered application for learning guidance",
-      "tools": [
-        {
-          "AI": true
-        },
-        {
-          "LLM": true
-        },
-        {
-          "Web Application": true
-        }
-      ],
-      "liveURL": null,
-      "github_link": "github.com/abdullahnadeem215"
+      "id": null,
+      "title": "Prof Mentor — AI Roadmap & Mentoring Application",
+      "description": "Built an AI-powered application designed to help users plan and navigate technical learning paths.",
+      "tech": "AI, LLM, Web Application",
+      "link": null,
+      "github": null,
+      "highlights": "Combined AI functionality with a web-based application interface."
     },
     {
-      "Title": "AI Cost Estimation Multi-Agent System",
-      "Problem": "Agentic AI workflow for estimating project costs",
-      "tools": [
-        {
-          "AI Agents": true
-        },
-        {
-          "LLM": true
-        },
-        {
-          "Multi-Agent Architecture": true
-        }
-      ],
-      "liveURL": null,
-      "github_link": "github.com/abdullahnadeem215"
+      "id": null,
+      "title": "AI Cost Estimation Multi-Agent System",
+      "description": "Designed an agentic AI workflow for estimating project costs.",
+      "tech": "AI Agents, LLM, Multi-Agent Architecture",
+      "link": null,
+      "github": null,
+      "highlights": "Demonstrates practical understanding of moving from single LLM calls toward agent-based architectures."
     },
     {
-      "Title": "Interview Management System",
-      "Problem": "Interview management system using priority-based scheduling",
-      "tools": [
-        {
-          "C++": true
-        },
-        {
-          "Data Structures & Algorithms": true
-        }
-      ],
-      "liveURL": null,
-      "github_link": "github.com/abdullahnadeem215"
+      "id": null,
+      "title": "Interview Management System",
+      "description": "Developed an interview management system using priority-based scheduling.",
+      "tech": "C++, Data Structures & Algorithms",
+      "link": null,
+      "github": null,
+      "highlights": null
     },
     {
-      "Title": "Rural Development Management System",
-      "Problem": "Database-driven management system for rural development activities",
-      "tools": [
-        {
-          "PHP": true
-        },
-        {
-          "MySQL": true
-        },
-        {
-          "DBMS": true
-        }
-      ],
-      "liveURL": null,
-      "github_link": "github.com/abdullahnadeem215"
+      "id": null,
+      "title": "Rural Development Management System",
+      "description": "Developed a database-driven management system for organizing rural development activities.",
+      "tech": "PHP, MySQL, DBMS",
+      "link": null,
+      "github": null,
+      "highlights": null
     },
     {
-      "Title": "Kisan AI",
-      "Problem": "AI-oriented agricultural solution",
-      "tools": [
-        {
-          "Software Requirements Engineering": true
-        },
-        {
-          "AI Concept": true
-        }
-      ],
-      "liveURL": null,
-      "github_link": "github.com/abdullahnadeem215"
+      "id": null,
+      "title": "Kisan AI",
+      "description": "Designed requirements and system specifications for an AI-oriented agricultural solution.",
+      "tech": "Software Requirements Engineering, AI Concept",
+      "link": null,
+      "github": null,
+      "highlights": null
     }
   ],
   "skills": [
     {
-      "Programming": [
-        {
-          "Python": true
-        },
-        {
-          "C++": true
-        },
-        {
-          "JavaScript": true
-        }
-      ]
+      "Programming": "Python, C++, JavaScript"
     },
     {
-      "AI & LLM": [
-        {
-          "LLM Applications": true
-        },
-        {
-          "Prompt Engineering": true
-        },
-        {
-          "RAG": true
-        },
-        {
-          "AI Agents": true
-        },
-        {
-          "Agentic AI": true
-        },
-        {
-          "Context Engineering": true
-        }
-      ]
+      "AI & LLM": "LLM Applications, Prompt Engineering, RAG, AI Agents, Agentic AI, Context Engineering"
     },
     {
-      "AI Frameworks": [
-        {
-          "LangChain": true
-        },
-        {
-          "LangGraph": true
-        },
-        {
-          "FastAPI": true
-        },
-        {
-          "Pydantic": true
-        }
-      ]
+      "AI Frameworks": "LangChain, LangGraph, FastAPI, Pydantic"
     },
     {
-      "Automation": [
-        {
-          "n8n": true
-        },
-        {
-          "Workflow Automation": true
-        },
-        {
-          "API Integrations": true
-        },
-        {
-          "Webhooks": true
-        }
-      ]
+      "Automation": "n8n, Workflow Automation, API Integrations, Webhooks"
     },
     {
-      "Machine Learning": [
-        {
-          "Scikit-learn": true
-        },
-        {
-          "Pandas": true
-        },
-        {
-          "NumPy": true
-        },
-        {
-          "Matplotlib": true
-        },
-        {
-          "Data Preprocessing": true
-        },
-        {
-          "Regression": true
-        }
-      ]
+      "Machine Learning": "Scikit-learn, Pandas, NumPy, Matplotlib, Data Preprocessing, Regression"
     },
     {
-      "Backend": [
-        {
-          "Python": true
-        },
-        {
-          "FastAPI": true
-        },
-        {
-          "REST APIs": true
-        }
-      ]
+      "Backend": "Python, FastAPI, REST APIs"
     },
     {
-      "Frontend": [
-        {
-          "HTML": true
-        },
-        {
-          "CSS": true
-        },
-        {
-          "JavaScript": true
-        },
-        {
-          "React": true
-        },
-        {
-          "Vite": true
-        },
-        {
-          "Tailwind CSS": true
-        }
-      ]
+      "Frontend": "HTML, CSS, JavaScript, React, Vite, Tailwind CSS"
     },
     {
-      "Databases": [
-        {
-          "MySQL": true
-        },
-        {
-          "PostgreSQL": true
-        },
-        {
-          "SQLite": true
-        }
-      ]
+      "Databases": "MySQL, PostgreSQL, SQLite"
     },
     {
-      "Tools": [
-        {
-          "Git": true
-        },
-        {
-          "GitHub": true
-        },
-        {
-          "Postman": true
-        },
-        {
-          "VS Code": true
-        }
-      ]
+      "Tools": "Git, GitHub, Postman, VS Code"
     },
     {
-      "Other": [
-        {
-          "OCR": true
-        },
-        {
-          "PDF/DOCX Processing": true
-        },
-        {
-          "Google Gemini": true
-        },
-        {
-          "Groq": true
-        },
-        {
-          "Hugging Face": true
-        }
-      ]
+      "Other": "OCR, PDF/DOCX Processing, Google Gemini, Groq, Hugging Face"
     }
   ],
   "education": [
     {
-      "University": "The University of Faisalabad (TUF)",
-      "Degree": "Bachelor of Science in Software Engineering",
-      "CGP": "3.39",
-      "Relevant Coursework": [
-        {
-          "Data Structures & Algorithms": true
-        },
-        {
-          "Object-Oriented Programming": true
-        },
-        {
-          "Database Management Systems": true
-        },
-        {
-          "Software Requirements Engineering": true
-        },
-        {
-          "Operating Systems": true
-        },
-        {
-          "Software Engineering": true
-        }
-      ],
-      "Duration": "2024 – Present"
+      "institution": "The University of Faisalabad (TUF)",
+      "degree": "Bachelor of Science in Software Engineering",
+      "cgpa": "3.39",
+      "relevantCoursework": "Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems, Software Requirements Engineering, Operating Systems, Software Engineering"
     },
     {
-      "Program": "Saylani Mass IT Training Program (SMIT)",
-      "Duration": "2024 – Present",
-      "Training areas": [
-        {
-          "Programming Foundations for AI": true
-        },
-        {
-          "AI Foundations": true
-        },
-        {
-          "Prompt & Context Engineering": true
-        },
-        {
-          "LLM Application Development": true
-        },
-        {
-          "AI Agent Development": true
-        },
-        {
-          "Multi-Agent Systems": true
-        },
-        {
-          "AI-Native Development": true
-        },
-        {
-          "AI System Design": true
-        },
-        {
-          "AI Infrastructure & DevOps": true
-        },
-        {
-          "Capstone AI Engineering": true
-        }
-      ]
+      "institution": "Saylani Mass IT Training Program (SMIT)",
+      "degree": "Agentic AI Architect / Engineer Program",
+      "trainingAreas": "Programming Foundations for AI, AI Foundations, Prompt & Context Engineering, LLM Application Development, AI Agent Development, Multi-Agent Systems, AI-Native Development, AI System Design, AI Infrastructure & DevOps, Capstone AI Engineering"
     }
   ],
   "certifications": [],
   "socialmedia": [
     {
-      "Platform": "LinkedIn",
-      "Link": "linkedin.com/in/abdullah-sheikh-2882a1317"
+      "platform": "LinkedIn",
+      "link": "linkedin.com/in/abdullah-sheikh-2882a1317"
     },
     {
-      "Platform": "GitHub",
-      "Link": "github.com/abdullahnadeem215"
+      "platform": "GitHub",
+      "link": "github.com/abdullahnadeem215"
     }
   ],
   "experience": []

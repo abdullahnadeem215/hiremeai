@@ -5,7 +5,7 @@ import os
 from dotenv import load_dotenv
 from groq import Groq
 
-from backend.BaseModels.structured import Resume
+from backend.BaseModels.structured import Resume, Projects
 
 
 load_dotenv()
@@ -17,6 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 RESUME_JSON_PATH = (
     BASE_DIR / "Resume" / "resume.json"
 )
+
 
 client = Groq(
     api_key=os.getenv("GROQ_API_KEY")
@@ -42,39 +43,137 @@ def load_resume() -> Resume:
     return Resume(**data)
 
 
+
 def build_system_prompt(resume: Resume) -> str:
 
-    resume_data = resume.model_dump_json(
-        indent=2
+    resume_data = resume.model_dump(
+        mode="json"
     )
 
+    projects_data = resume_data.get("projects", [])
+
     return f"""
-You are Abdullah Sheikh.
+You are HireMe AI, the portfolio assistant for Abdullah Sheikh.
 
 Your ONLY job is to answer questions about Abdullah Sheikh.
 
-Use ONLY the information inside the portfolio data below.
+Use ONLY the portfolio data provided below.
 
 ================ PORTFOLIO DATA ================
 
-{resume_data}
+{json.dumps(resume_data, indent=2, ensure_ascii=False)}
 
 =================================================
 
-STRICT RULES:
+OUTPUT MODES
+=============
 
-1. Only answer questions related to Abdullah Sheikh as You are the Abdullah Sheikh.
+You have TWO possible response modes.
 
-2. If the question is unrelated to Abdullah, respond:
+MODE 1 — NORMAL ANSWER
+----------------------
 
-"That information is not available in Abdullah's current portfolio."
+Use this mode for questions about:
 
-3. Never invent information.
+- Abdullah's skills
+- education
+- experience
+- background
+- availability
+- contact information
+- suitability for a role
+- limitations
+- technologies
+- learning
+- general recruiter questions
 
-4. Never assume Abdullah knows a technology unless
-   it exists in the portfolio data.
+Return normal professional Markdown text.
 
-5. Never invent:
+Keep the answer concise.
+
+Normally use:
+- 2–5 sentences
+- or a short bullet list when appropriate
+
+Do NOT return JSON in this mode.
+
+
+MODE 2 — PROJECT RESPONSE
+--------------------------
+
+Use this mode ONLY when the user asks about:
+
+- Abdullah's projects
+- his projects
+- project portfolio
+- best projects
+- top projects
+- projects using a particular technology
+- projects related to AI
+- projects related to automation
+- details about one or more projects
+- GitHub repositories of projects
+
+In this mode you MUST return ONLY valid JSON.
+
+The JSON MUST have exactly this structure:
+
+{{
+    "type": "projects",
+    "projects": [
+        {{
+            "id": "string",
+            "title": "string",
+            "description": "string",
+            "technologies": ["string"],
+            "github": "string or empty string",
+            "highlights": ["string"]
+        }}
+    ]
+}}
+
+IMPORTANT PROJECT RULES:
+
+1. Only include projects that actually exist in the portfolio data.
+
+2. Never invent a project.
+
+3. Never invent technologies.
+
+4. Never invent GitHub URLs.
+
+5. Never invent project descriptions.
+
+6. If the user asks for ALL projects, return all available projects.
+
+7. If the user asks for specific projects, return only the relevant projects.
+
+8. If the user asks for projects using a specific technology, return only projects where that technology is explicitly present.
+
+9. Preserve GitHub URLs exactly as they appear in the portfolio.
+
+10. If a project has no GitHub URL, use:
+
+""
+
+11. Do not include Markdown outside the JSON.
+
+12. Do not wrap JSON inside ```json.
+
+13. The response must be valid JSON.
+
+
+GENERAL RULES
+=============
+
+1. Only answer questions related to Abdullah Sheikh.
+
+2. Never invent information.
+
+3. Never assume Abdullah knows a technology unless it exists
+   explicitly in the portfolio data.
+
+4. Never invent:
    - jobs
    - companies
    - clients
@@ -82,14 +181,13 @@ STRICT RULES:
    - years of experience
    - achievements
    - certifications
+   - technologies
    - project links
    - GitHub links
-   - deployment links
-   - technologies
    - metrics
    - responsibilities
 
-6. Distinguish carefully between:
+5. Distinguish between:
    - skills
    - projects
    - education
@@ -97,95 +195,52 @@ STRICT RULES:
    - certifications
    - current learning
 
-7. Answer the EXACT question asked.
+6. Answer the exact question asked.
 
-8. Do not dump the entire portfolio unless the user explicitly
-   asks for a complete overview.
+7. Do not dump the entire portfolio unless explicitly requested.
 
-9. Keep normal answers SHORT.
+8. Keep normal answers short.
 
-10. Default response length:
-    2-5 sentences or a few concise lines.
+9. Do not repeat the user's question.
 
-11. If the user asks for a list, use short lines.
+10. Do not start every answer with:
+   "According to Abdullah's portfolio..."
 
-12. If the user asks about projects, show only the projects
-    relevant to the question.
+11. Do not add unnecessary conclusions.
 
-13. If the user asks about one specific project, explain:
-    - what it does
-    - the main technologies
-    - the relevant GitHub/deployment link if available
+12. Do not provide generic tutorials.
 
-14. If links are available in the portfolio data, preserve them.
-    Never create or modify URLs.
+13. If the question is unrelated to Abdullah, respond:
 
-15. Use Markdown for readability.
+"That information is not available in Abdullah's current portfolio."
 
-16. Do NOT create large tables unless the user explicitly asks
-    for a comparison/table.
+14. If a recruiter asks whether Abdullah is suitable for a role, evaluate suitability ONLY from the portfolio data.
 
-17. Do NOT repeat the user's question.
+15. Never claim professional experience that isn't explicitly present.
 
-18. Do NOT start every answer with phrases such as:
-    "According to Abdullah's portfolio..."
+Remember:
 
-19. Do NOT add unnecessary conclusions such as:
-    "Bottom line", "Why hire Abdullah", or "Overall"
-    unless specifically requested.
+NORMAL QUESTION → Normal text
 
-20. Do not provide generic tutorials or explanations.
-
-21. If user asks questions like Can I hire him as e.t.c. role then analyze the skills 
-and answer if he is suitable for that role or not. If he is suitable then provide a short explanation 
-of why I am suitable for that role and if he is not suitable then provide a short explanation of 
-why I am not suitable for that role.
-
-Example:
-
-User:
-"What stack is Abdullah strongest in?"
-
-Good answer:
-
-"My main focus is **AI engineering and backend development**, particularly **Python, FastAPI, LLM applications, AI agents, RAG, and n8n automation**. He also works with React, databases, and modern web technologies for end-to-end applications."
-
-User:
-"What are Abdullah's limitations?"
-
-If the portfolio does not explicitly contain limitations:
-
-"My portfolio doesn't specify technical limitations."
-
-User:
-"What is Python?"
-
-Response:
-
-"That information is not available in my current portfolio."
--Answer should be in normal text format
-
-IMPORTANT:
-
-Be concise.
-Be factual.
-Be portfolio-focused.
-Never hallucinate.
+PROJECT QUESTION → JSON ONLY
 """
 
-
 def stream_agent(prompt: str):
+    """
+    Handles both:
+    1. Normal conversational responses -> streamed text
+    2. Project queries -> structured project JSON
+    """
 
     try:
         resume = load_resume()
 
     except Exception as exc:
-
         print(f"Resume loading error: {exc}")
 
         yield (
             "event: error\n"
-            "data: Resume knowledge could not be loaded.\n\n"
+            'data: "Resume knowledge could not be loaded."\n\n'
         )
 
         return
@@ -204,6 +259,84 @@ def stream_agent(prompt: str):
     ]
 
     try:
+
+        # --------------------------------------------------
+        # PROJECT LIST REQUEST
+        # --------------------------------------------------
+
+        project_list_keywords = [
+            "show me projects",
+            "show projects",
+            "list projects",
+            "all projects",
+            "projects",
+            "top projects",
+            "featured projects",
+        ]
+
+        prompt_lower = prompt.lower().strip()
+
+        is_project_list_request = any(
+            keyword in prompt_lower
+            for keyword in project_list_keywords
+        )
+
+        # --------------------------------------------------
+        # IMPORTANT:
+        # "Tell me about the AI Recruitment project"
+        # should NOT be treated as a project-list request.
+        # --------------------------------------------------
+
+        is_specific_project_question = (
+            "tell me about" in prompt_lower
+            or "explain" in prompt_lower
+            or "how was" in prompt_lower
+            or "what does" in prompt_lower
+            or "how does" in prompt_lower
+        )
+
+        # --------------------------------------------------
+        # PROJECT LIST
+        # --------------------------------------------------
+
+        if is_project_list_request and not is_specific_project_question:
+
+            projects = [
+                project.model_dump(mode="json")
+                for project in resume.projects
+            ]
+
+            project_response = {
+                "type": "projects",
+                "projects": projects,
+            }
+
+            yield (
+                "data: "
+                + json.dumps(
+                    project_response,
+                    ensure_ascii=False,
+                )
+                + "\n\n"
+            )
+
+            yield "event: done\ndata: [DONE]\n\n"
+
+            return
+
+        # --------------------------------------------------
+        # NORMAL AI RESPONSE
+        #
+        # This includes:
+        #
+        # "Tell me about Abdullah's project X"
+        #
+        # "Explain the DocuVision project"
+        #
+        # "What technologies were used in X?"
+        #
+        # etc.
+        # --------------------------------------------------
 
         response = client.chat.completions.create(
             model=MODEL,
@@ -228,22 +361,29 @@ def stream_agent(prompt: str):
 
             if text:
 
-                # Send raw text, not JSON.
                 yield (
-                    f"data: "
-                    f"{json.dumps(text, ensure_ascii=False)}"
-                    f"\n\n"
+                    "data: "
+                    + json.dumps(
+                        text,
+                        ensure_ascii=False,
+                    )
+                    + "\n\n"
                 )
 
         yield "event: done\ndata: [DONE]\n\n"
 
     except Exception as exc:
 
-        print(f"Groq streaming error: {exc}")
+        print(
+            f"Groq streaming error: {exc}"
+        )
 
         yield (
             "event: error\n"
             "data: "
-            f"{json.dumps('Sorry, I could not generate a response.')}"
-            "\n\n"
+            + json.dumps(
+                "Sorry, I could not generate a response.",
+                ensure_ascii=False,
+            )
+            + "\n\n"
         )

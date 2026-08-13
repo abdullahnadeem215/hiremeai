@@ -1,12 +1,37 @@
+export interface Project {
+  id: string | null;
+  title: string;
+  description: string;
+  technologies: string[];
+  github?: string;
+  link?: string;
+  highlights?: string[] | null;
+}
+
+
 export interface Message {
   id: string;
-  role: "user" | "assistant" | "system";
+
+  role:
+    | "user"
+    | "assistant"
+    | "system";
+
   content: string;
+
   timestamp: number;
+
   isStreaming?: boolean;
+
+  type?: "text" | "projects";
+
+  projects?: Project[];
+
   category?: string;
+
   suggestedFollowups?: string[];
 }
+
 
 export interface ProfileData {
   name: string;
@@ -40,6 +65,7 @@ export interface ProfileData {
     highlights: string[];
   }[];
 }
+
 
 export interface PrebuiltPrompt {
   id: string;

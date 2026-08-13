@@ -8,27 +8,35 @@ from backend.Agents.chatbot import stream_agent
 from backend.Agents.resumeanalyzer import resume_analyzer
 
 
+# ============================================================
+# APPLICATION LIFESPAN
+# ============================================================
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
 
     print("🚀 Starting HireMe AI...")
 
     try:
-        # Run ONCE when the application starts
+        # Analyze the resume when the backend starts.
+        # This updates backend/Resume/resume.json
         resume_analyzer()
 
         print("✅ Resume knowledge updated.")
 
     except Exception as exc:
-
-        print(
-            f"❌ Resume analyzer failed: {exc}"
-        )
+        # Do not prevent FastAPI from starting if resume
+        # analysis fails.
+        print(f"❌ Resume analyzer failed: {exc}")
 
     yield
 
     print("🛑 HireMe AI shutting down...")
 
+
+# ============================================================
+# FASTAPI APP
+# ============================================================
 
 app = FastAPI(
     title="HireMe AI",
@@ -38,29 +46,50 @@ app = FastAPI(
 )
 
 
+# ============================================================
+# CORS
+# ============================================================
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://localhost:3000",
+
+        # Vercel frontend
+        "https://hire-abdullah-three.vercel.app",
+    ],
     allow_credentials=False,
     allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
 )
 
 
+# ============================================================
+# HEALTH CHECK
+# ============================================================
+
 @app.get("/")
-def read_root():
+async def read_root():
 
     return {
-        "message": "HireMe AI API is running."
+        "status": "online",
+        "service": "HireMe AI",
+        "version": "1.0.0",
     }
 
+
+# ============================================================
+# CHAT STREAM
+# ============================================================
 
 @app.get("/chat/stream")
 def chat_stream(
     message: str = Query(
         ...,
         min_length=1,
-        max_length=1000,
+        max_length=2000,
+        description="Message sent to HireMe AI",
     )
 ):
 
@@ -68,7 +97,7 @@ def chat_stream(
         stream_agent(message),
         media_type="text/event-stream",
         headers={
-            "Cache-Control": "no-cache",
+            "Cache-Control": "no-cache, no-transform",
             "Connection": "keep-alive",
             "X-Accel-Buffering": "no",
         },
