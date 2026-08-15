@@ -16,7 +16,7 @@ const STARTER_PROMPTS = [
   {
     title: "Featured Projects",
     icon: FolderKanban,
-    prompt: "show me Abdullah Sheikh's projects and his GitHub repositories.",
+    prompt: "show me  projects of Abdullah Sheikh and his GitHub repositories.",
   },
   {
     title: "Why Hire Abdullah?",

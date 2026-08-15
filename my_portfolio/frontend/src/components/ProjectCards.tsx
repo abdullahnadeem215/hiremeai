@@ -41,6 +41,19 @@ export const ProjectCards: React.FC<
             project.id ||
             `${project.title}-${projectIndex}`;
 
+          const technologies: string[] =
+            Array.isArray(project.technologies)
+              ? project.technologies
+              : Array.isArray(
+                  (project as Project & {
+                    tech?: string[];
+                  }).tech
+                )
+                ? ((project as Project & {
+                    tech?: string[];
+                  }).tech as string[])
+                : [];
+
           return (
             <div
               key={projectKey}
@@ -102,44 +115,37 @@ export const ProjectCards: React.FC<
 
               {/* TECHNOLOGIES */}
 
-              {Array.isArray(
-                project.technologies
-              ) &&
-                project.technologies.length >
-                  0 && (
-                  <div
-                    className="
-                      mt-3
-                      flex
-                      flex-wrap
-                      gap-1.5
-                    "
-                  >
-                    {project.technologies.map(
-                      (
-                        technology,
-                        techIndex
-                      ) => (
-                        <span
-                          key={`${technology}-${techIndex}`}
-                          className="
-                            rounded-md
-                            border
-                            border-slate-700
-                            bg-slate-800/80
-                            px-2
-                            py-1
-                            text-[10px]
-                            font-mono
-                            text-slate-400
-                          "
-                        >
-                          {technology}
-                        </span>
-                      )
-                    )}
-                  </div>
-                )}
+              {technologies.length > 0 && (
+                <div
+                  className="
+                    mt-3
+                    flex
+                    flex-wrap
+                    gap-1.5
+                  "
+                >
+                  {technologies.map(
+                    (technology, techIndex) => (
+                      <span
+                        key={`${technology}-${techIndex}`}
+                        className="
+                          rounded-md
+                          border
+                          border-slate-700
+                          bg-slate-800/80
+                          px-2
+                          py-1
+                          text-[10px]
+                          font-mono
+                          text-slate-400
+                        "
+                      >
+                        {technology}
+                      </span>
+                    )
+                  )}
+                </div>
+              )}
 
               {/* HIGHLIGHTS */}
 

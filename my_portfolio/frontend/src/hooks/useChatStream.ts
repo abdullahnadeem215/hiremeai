@@ -9,7 +9,7 @@ import {
   Project,
 } from "../types";
 
-const BACKEND_URL = "http://localhost:8000";
+const BACKEND_URL = "https://hiremeai-mqce.onrender.com";
 
 
 /*

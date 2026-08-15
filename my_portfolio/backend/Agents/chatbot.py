@@ -59,6 +59,14 @@ Your ONLY job is to answer questions about Abdullah Sheikh.
 
 Use ONLY the portfolio data provided below.
 
+SPECIAL OVERRIDE RULE
+---------------------
+If the user's message explicitly asks for a normal explanation in plain language,
+Markdown text, or says "do not return JSON" / "not JSON" / "give me a natural answer",
+then answer in MODE 1 (normal text) even if the topic is a project.
+Only return JSON when the user is requesting a project list or structured project data
+and does not explicitly ask for a normal explanation.
+
 ================ PORTFOLIO DATA ================
 
 {json.dumps(resume_data, indent=2, ensure_ascii=False)}
@@ -337,6 +345,15 @@ def stream_agent(prompt: str):
         #
         # etc.
         # --------------------------------------------------
+
+        if (
+            "do not return json" in prompt_lower
+            or "not json" in prompt_lower
+            or "plain markdown" in prompt_lower
+            or "plain text" in prompt_lower
+            or "natural language" in prompt_lower
+        ):
+            pass
 
         response = client.chat.completions.create(
             model=MODEL,

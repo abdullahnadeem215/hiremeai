@@ -141,9 +141,12 @@ function MainChatApp() {
   const handleAskProject = (project: Project) => {
 
     const prompt =
-      `Tell me about Abdullah's project "${project.title}". ` +
-      `Explain what it does, the technologies used, how it was built, ` +
-      `and its key highlights. Only use information available in Abdullah's portfolio.`;
+      `Tell me about Abdullah's project "${project.title}" in clear natural language. ` +
+      `Explain what it does, the technologies used such as ${
+        (project.technologies ?? []).join(", ") || "the project stack"
+      }, how it was built, and its key highlights. ` +
+      `Only use information available in Abdullah's portfolio. ` +
+      `IMPORTANT: respond as a normal Markdown answer, not JSON, not an array, and not a project object.`;
 
     void sendMessage(prompt);
   };
